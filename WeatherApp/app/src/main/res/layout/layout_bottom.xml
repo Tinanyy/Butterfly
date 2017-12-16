@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab_menue"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true">
+
+
+
+        <TextView
+            android:id ="@+id/txt_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/m_weather"
+            android:gravity="center"
+            android:textColor="@color/colorGray"
+            android:textStyle="bold"
+            android:textSize="50px"
+            />
+        <TextView
+            android:id ="@+id/txt_friends"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/m_friends"
+            android:gravity="center"
+            android:textColor="@color/colorGray"
+            android:textStyle="bold"
+            android:textSize="50px"
+            />
+        <TextView
+            android:id ="@+id/txt_daily"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/m_daily"
+            android:gravity="center"
+            android:textColor="@color/colorGray"
+            android:textStyle="bold"
+            android:textSize="50px"
+            />
+        <TextView
+            android:id ="@+id/txt_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/m_profile"
+            android:gravity="center"
+            android:textColor="@color/colorGray"
+            android:textStyle="bold"
+            android:textSize="50px"
+            />
+
+    </LinearLayout>

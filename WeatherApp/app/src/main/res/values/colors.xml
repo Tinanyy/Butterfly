@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBlue">#4682F0</color>
+    <color name="colorDarkGray">#757575</color>
+    <color name="colorGray">#D7D7D7</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPress">#68CECE</color>
+    <color name="colorDeepGray">#646262</color>
+    <color name="color3">#FF4081</color>
+    <color name="color4">#59FFFFFF</color>
+
+   <color name="color5">#F2F4F5</color>
+    <color name="colorDivider">#F2F2F2</color>
+
+
+</resources>
