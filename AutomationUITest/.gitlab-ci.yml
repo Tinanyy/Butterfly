@@ -1,0 +1,78 @@
+variables:
+  AWS_ACCESS_KEY_ID: "AKIAJFKUJ2SVQGE36RZA"
+  AWS_SECRET_ACCESS_KEY: "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"
+
+
+
+stages:
+  - test
+  - build
+  - archive
+  - functional_test
+
+test_project:
+  stage: test
+  before_script:
+  - export ANDROID_HOME="/opt/android-sdk"
+  - ./gradlew clean
+  - ./gradlew clean --stacktrace
+  script:
+  - ./gradlew clean
+  only:
+  - master
+  - search
+ # - CI_Test
+  - 3.1.2
+  tags:
+    - android
+    - gradle
+
+build_project:
+  stage: build
+  before_script:
+  - export ANDROID_HOME="/opt/android-sdk"
+  - ./gradlew clean
+  - ./gradlew clean --stacktrace
+  script:
+  - echo something must go here
+  only:
+    - master
+    - search
+    - CI_Test
+    - 3.1.2
+  tags:
+    - android
+    - gradle
+
+functionalTest_project:
+  stage: functional_test
+  image: python:latest
+  script:
+    - bash ./analysis.sh
+    - python -m pip install --user boto3
+    - python ./python_ci.py
+#  dependencies:
+#    - archive_project
+  only:
+    - master
+    - CI_Test
+
+archive_project:
+  stage: archive
+  before_script:
+  - export ANDROID_HOME="/opt/android-sdk"
+  - ./gradlew clean
+  - ./gradlew clean --stacktrace
+  script:
+    - ./gradlew assembleRelease
+  only:
+    - master
+    - search
+    - CI_Test
+    - 3.1.2
+  artifacts:
+    paths:
+    - main/build/outputs/
+  tags:
+    - android
+    - gradle
