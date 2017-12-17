@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVUser;
+
 public class MainTab04 extends Fragment {
 
     private View tab4View;
     private TextView btnLogout;
 
 
-    @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -24,9 +25,13 @@ public class MainTab04 extends Fragment {
             @Override
             public void onClick(View v) {
 
-
+                AVUser.getCurrentUser().logOut();
+             //   startActivity(new Intent(MainTab04.this, LoginActivity.class));
+              //  MainTab04.this.finish();
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
+                getActivity().finish();
+
 
             //    Intent intent=new Intent("activity.loggou.kill.all.activities");
             //   sendBroadcast(intent); //发送广播

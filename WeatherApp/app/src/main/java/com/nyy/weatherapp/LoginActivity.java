@@ -6,7 +6,6 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -25,7 +24,7 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
 
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends BaseActivity {
 
     private TextView txtRegister;
     private AutoCompleteTextView etLogin;

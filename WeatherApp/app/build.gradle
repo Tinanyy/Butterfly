@@ -42,47 +42,43 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
     //统一用v7的包，v7中包含v4
     compile('com.android.support:appcompat-v7:23.3.0') {
         exclude module: 'support-v4'
     }
 
-
-
     // LeanCloud 基础包
-    compile ('cn.leancloud.android:avoscloud-sdk:v4.4.4')
+    
 
-
-    // 推送与实时聊天需要的包
-    compile ('cn.leancloud.android:avoscloud-push:v4.4.4@aar' ) {transitive = true}
+    // 推送与实时聊天需要的包compile ('cn.leancloud.android:avoscloud-push:v4.4.4@aar' ) {transitive = true }
 
     // LeanCloud 统计包
-    compile ('cn.leancloud.android:avoscloud-sdk:v4.4.4')
-
+    compile('cn.leancloud.android:avoscloud-sdk:v4.4.4')
 
     // LeanCloud 用户反馈包
-    compile ('cn.leancloud.android:avoscloud-sdk:v4.4.4')
+    compile('cn.leancloud.android:avoscloud-sdk:v4.4.4')
 
     // avoscloud-sns：LeanCloud 第三方登录包
-    compile ('cn.leancloud.android:avoscloud-sns:v4.4.4@aar')
-    compile ('cn.leancloud.android:qq-sdk:1.6.1-leancloud')
     // 新浪微博 SDK
-   // compile('com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar')
+    // compile('com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar')
 
     // LeanCloud 应用内搜索包
+    compile 'cn.leancloud.android:avoscloud-sdk:v4.4.4'
+    compile 'cn.leancloud.android:avoscloud-sns:v4.4.4@aar'
+    compile 'cn.leancloud.android:qq-sdk:1.6.1-leancloud'
+    compile 'cn.leancloud.android:avoscloud-sdk:v4.4.4'
+    compile 'cn.leancloud.android:avoscloud-sns:v4.4.4@aar'
+    compile 'cn.leancloud.android:qq-sdk:1.6.1-leancloud'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support:support-v4:26.+'
-    compile 'cn.leancloud.android:avoscloud-sdk:v4.4.4'
     compile 'cn.leancloud.android:avoscloud-statistics:v4.4.4'
     compile 'cn.leancloud.android:avoscloud-feedback:v4.4.4@aar'
-    compile 'cn.leancloud.android:avoscloud-sns:v4.4.4@aar'
-    compile 'cn.leancloud.android:qq-sdk:1.6.1-leancloud'
     compile 'cn.leancloud.android:avoscloud-search:v4.4.4@aar'
     testCompile 'junit:junit:4.12'
 }
+
 
 
 
